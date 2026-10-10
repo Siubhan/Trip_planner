@@ -153,3 +153,4 @@ tests/               test_clients/, test_trip_service.py, test_routes.py, test_s
 ## Лицензия
 
 MIT. Leaflet распространяется по лицензии BSD-2 (`frontend/static/vendor/leaflet/LICENSE`). Данные карты: © участники [OpenStreetMap](https://www.openstreetmap.org/copyright), лицензия ODbL.
+Реализовано при поддержке Claude, Antropic.
