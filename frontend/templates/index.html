@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Планировщик поездки</title>
+  <meta name="description" content="Погода, курс валюты, справка о стране и интересные места на карте в одном ответе.">
+  <link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Планировщик поездки</h1>
+    <p class="lead">Погода, курс валюты, справка о стране и места на карте — без пяти открытых вкладок.</p>
+  </header>
+
+  <main>
+    <form id="trip-form" class="card form" novalidate>
+      <label class="field grow">
+        <span>Куда едем</span>
+        <input id="destination" name="destination" type="text" required minlength="2" maxlength="100"
+               placeholder="Лиссабон, Токио, Грузия…" autocomplete="off">
+      </label>
+      <label class="field">
+        <span>С</span>
+        <input id="start" name="start" type="date" required>
+      </label>
+      <label class="field">
+        <span>По</span>
+        <input id="end" name="end" type="date" required>
+      </label>
+      <label class="field narrow">
+        <span>Ваша валюта</span>
+        <input id="home_currency" name="home_currency" type="text" required list="currencies"
+               maxlength="3" pattern="[A-Za-z]{3}" value="EUR" autocomplete="off">
+        <datalist id="currencies">
+          <option value="RUB"><option value="EUR"><option value="USD"><option value="GBP">
+          <option value="CHF"><option value="PLN"><option value="CZK"><option value="TRY">
+          <option value="CNY"><option value="JPY"><option value="KZT"><option value="GEL">
+        </datalist>
+      </label>
+      <button id="submit" type="submit">Показать</button>
+    </form>
+
+    <p id="message" class="message" role="alert" hidden></p>
+
+    <section id="result" hidden>
+      <div class="grid">
+        <article class="card" id="card-country"><h2>Страна</h2><div class="body"></div></article>
+        <article class="card" id="card-currency"><h2>Курс валюты</h2><div class="body"></div></article>
+        <article class="card wide" id="card-weather"><h2>Погода</h2><div class="body"></div></article>
+      </div>
+      <article class="card map-card">
+        <h2>Карта <small id="places-note"></small></h2>
+        <div id="map" aria-label="Карта с точками интереса"></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Данные: OpenStreetMap, Open-Meteo, Frankfurter, REST Countries.</span>
+    <a href="/docs">Swagger API</a>
+    <span>v{{ version }}</span>
+  </footer>
+
+  <script src="/static/vendor/leaflet/leaflet.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

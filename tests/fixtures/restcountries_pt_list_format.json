@@ -1,0 +1,14 @@
+{
+  "data": {
+    "objects": [
+      {
+        "names": {"common": "Portugal"},
+        "capitals": [{"name": "Lisbon"}],
+        "languages": {"por": "Portuguese"},
+        "currencies": [{"code": "EUR", "name": "Euro", "symbol": "€"}],
+        "timezones": ["UTC+00:00"],
+        "flag": {"emoji": "🇵🇹"}
+      }
+    ]
+  }
+}

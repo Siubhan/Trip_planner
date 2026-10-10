@@ -1,0 +1,16 @@
+{
+  "data": {
+    "objects": [
+      {
+        "names": {"common": "Portugal"},
+        "capitals": [{"name": "Lisbon", "attributes": {"primary": true}}],
+        "languages": [{"iso_639_3": "por", "bcp_47": "pt", "name": "Portuguese"}],
+        "currencies": {"EUR": {"name": "Euro", "symbol": "€"}},
+        "timezones": ["UTC-01:00", "UTC+00:00"],
+        "flag": {"emoji": "🇵🇹", "url_svg": "https://flags.restcountries.com/v5/pt.svg"},
+        "codes": {"alpha_2": "PT"}
+      }
+    ],
+    "meta": {"total": 1, "count": 1, "limit": 25, "offset": 0, "more": false}
+  }
+}
